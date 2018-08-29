@@ -7,9 +7,7 @@ grafana:
   links:
     - influxdb
   volumes:
-    # sudo mkdir -p /data; chown 472:472 /srv/docker/grafana/data
-    # Data persistency
-    - ./data:/var/lib/grafana
+    - ./grafana/data:/var/lib/grafana
 
 influxdb:
   image: influxdb:latest
@@ -20,6 +18,4 @@ influxdb:
     - "8090:8090"
   # env:
   volumes:
-    # Data persistency
-    # sudo mkdir -p /srv/docker/influxdb/data
-    - ./data:/var/lib/influxdb
+    - ./influxdb/data:/var/lib/influxdb

@@ -1,8 +1,8 @@
-all: folders rwx-grafana
+all: folders permissions
 
 folders:
 	sudo mkdir -p ./grafana/data ./grafana/conf ./influxdb/conf
-rwx-grafana:
-	sudo chown 472:472 ./grafana
+permissions:
+	sudo chown -R 472:472 ./grafana
 nofolders:
 	sudo rm -rf ./grafana ./influxdb

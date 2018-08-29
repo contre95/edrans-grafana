@@ -22,9 +22,9 @@ $ docker-compose up
 ## Makefile
 Commands:
 * nofolders : deletes all folders.
-* folder : creates necessary folders.
+* folders : creates necessary folders.
 * permissions:  set necessary permissions to fix Grafana issue
 
 ### Acknowledgments
 
-* Makefile is important deu to an issue reported by Grafana on permissions with versions >  5.1.0
+* Makefile is important due to an issue reported by Grafana on permissions with versions >  5.1.0

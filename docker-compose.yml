@@ -1,0 +1,11 @@
+version: "2"
+services:
+  grafana:
+    image: grafana/grafana #:5.1.0
+    ports:
+      - 3000:3000
+    user: "472"
+    volumes:
+      - ./data:/var/lib/grafana
+      - ./conf:/etc/grafana
+      # - ./log:/var/log/grafana

@@ -15,7 +15,15 @@ influxdb:
   ports:
     - "8083:8083"
     - "8086:8086"
-    - "8090:8090"
-  # env:
+# env:
   volumes:
     - ./influxdb/data:/var/lib/influxdb
+  restart: always
+  # 
+  # telegraf:
+  #   container_name: telegraf
+  #   image: telegraf
+  #   network_mode: "host"
+  #   volumes:
+  #     - ./telegraf/conf/telegraf.conf:/etc/telegraf/telegraf.conf
+  #     # - /var/run/docker.sock:/var/run/docker.sock

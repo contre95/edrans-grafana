@@ -24,6 +24,7 @@ Commands:
 * nofolders : deletes all folders.
 * folders : creates necessary folders.
 * permissions:  set necessary permissions to fix Grafana issue
+* teleconf: copies telegraf.conf from ./conf to ./telegraf/conf/ (depends on folders of course)
 
 ### Acknowledgments
 

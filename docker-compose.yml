@@ -19,7 +19,7 @@ influxdb:
   volumes:
     - ./influxdb/data:/var/lib/influxdb
   restart: always
-  # 
+  #
   # telegraf:
   #   container_name: telegraf
   #   image: telegraf

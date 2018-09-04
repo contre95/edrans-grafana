@@ -1,0 +1,12 @@
+all: influx grafana telegraf database
+
+influx: 
+	sudo docker container run -d -p 8086:8086 -p 8083:8083 --name influxdb influxdb
+grafana: 
+	sudo docker container run -d -p 3000:3000 --name grafana grafana/grafana
+telegraf: 
+	sudo docker container run -d --name telegrad telegraf
+database: 
+	curl -vvv -XPOST http://localhost:8086/query --data-urlencode 'q=CREATE DATABASE "telegraf"'
+	curl "http://localhost:8086/query" --data-urlencode "q=CREATE USER myuser WITH PASSWORD 'mypass' WITH ALL PRIVILEGES"
+

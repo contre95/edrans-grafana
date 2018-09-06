@@ -2,7 +2,8 @@ version: "3"
 services:
 
   grafana:
-    image:          grafana/grafana
+    # image:          grafana/grafana
+    build: .
     container_name: grafana
     ports:
       - "3000:3000"

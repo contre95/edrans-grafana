@@ -12,24 +12,24 @@ services:
     networks:
       - tig
 
-  influxdb:
-    image:          influxdb:latest
-    container_name: influx
-    ports:
-      - "8083:8083"
-      - "8086:8086"
-    volumes:
-      - ./influxdb:/var/lib/influxdb
-    networks:
-      - tig
+        #  influxdb:
+        #image:          influxdb:latest
+        # container_name: influx
+        #ports:
+        # - "8083:8083"
+        # - "8086:8086"
+        #volumes:
+        # - ./influxdb:/var/lib/influxdb
+        # networks:
+        # - tig
 
-  telegraf:
-    container_name: telegraf
-    image:          telegraf
-    volumes:
-      - ./telegraf/conf/telegraf.conf:/etc/telegraf/telegraf.conf
-    networks:
-      - tig
+        #telegraf:
+        #container_name: telegraf
+        #image:          telegraf
+        #volumes:
+        # - ./telegraf/conf/telegraf.conf:/etc/telegraf/telegraf.conf
+        # networks:
+        # - tig
 
 networks:
   tig:
